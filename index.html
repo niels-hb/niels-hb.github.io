@@ -27,6 +27,9 @@
           },
           container: {
             center: true,
+            padding: {
+              DEFAULT: "1rem",
+            },
           },
         },
       };
@@ -153,6 +156,130 @@
           <a target="blank" href="https://www.linkedin.com/in/niels-heidbrink/">
             <i class="fa-brands fa-linkedin text-2xl"></i>
           </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="py-8">
+      <div class="bg-black">
+        <div class="container">
+          <h1 class="text-xl uppercase text-white py-2">Current projects</h1>
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 py-2">
+          <div class="flex flex-col">
+            <div class="flex flex-row justify-between align-middle">
+              <h1 class="text-lg font-medium">Consilium</h1>
+              <span class="border rounded-full bg-orange-500 px-2 text-white">
+                Development
+              </span>
+            </div>
+
+            <div>
+              <a target="blank" href="https://github.com/niels-hb/consilium/">
+                <i class="fa-brands fa-github"></i>
+              </a>
+              <a target="blank" href="https://consilium.heidbrink.dev/">
+                <i class="fa-solid fa-globe"></i>
+              </a>
+            </div>
+
+            <p>
+              A personal finance tracker built with Flutter and Firebase. It
+              allows you to track expenses (for example the stuff you bought)
+              and subscriptions (rent, insurance, ...) as well as categorize
+              them as necessary. It provides insight for the user by generating
+              relevant charts and diagrams detailing monthly spending per
+              category.
+            </p>
+          </div>
+
+          <div class="flex flex-col">
+            <div class="flex flex-row justify-between align-middle">
+              <h1 class="text-lg font-medium">Consilium Admin CLI</h1>
+              <span class="border rounded-full bg-green-600 px-2 text-white">
+                Release
+              </span>
+            </div>
+
+            <div>
+              <a
+                target="blank"
+                href="https://github.com/niels-hb/consilium-admin/"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <p>
+              The accompanying administrative tools for the Consilium mobile
+              application to create & delete users as well as migrate, export &
+              import user data. The CLI tool is written using Golang and comes
+              with a few tests for important functions. Its main use is (in
+              addition to providing easier maintenance options for the Firebase
+              database) to give me the option to learn Golang.
+            </p>
+          </div>
+
+          <div class="flex flex-col">
+            <div class="flex flex-row justify-between align-middle">
+              <h1 class="text-lg font-medium">Crypto Asset Tracker</h1>
+              <span class="border rounded-full bg-gray-400 px-2 text-white">
+                Concept
+              </span>
+            </div>
+
+            <div>
+              <a target="blank">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <p>
+              A project to replace my spreadsheet tracking the performance of my
+              cryptocurrency portfolio. The idea is that the user enters the
+              tokens he's holding in his wallets at any given point in time (for
+              example monthly) and the application will return charts, prices
+              and valuations for these wallets. It might also indicate staking
+              performance/returns if the token supports it.
+            </p>
+          </div>
+
+          <div class="flex flex-col">
+            <div class="flex flex-row justify-between align-middle">
+              <h1 class="text-lg font-medium">MasterMind</h1>
+              <span class="border rounded-full bg-green-600 px-2 text-white">
+                Release
+              </span>
+            </div>
+
+            <div>
+              <a
+                target="blank"
+                href="https://github.com/niels-hb/dhbw-microservices-mastermind/"
+              >
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+
+            <p>
+              A project created as part of an university assignment. The goal
+              was to create a mobile application where the user can play the
+              tabletop game "MasterMind". The final project supported user
+              management, leader boards, ranking and multiplayer. The backend is
+              written in Nest.js, the frontend in Flutter.
+              <br />
+              <i>MasterMind TL; DR:</i>
+              A friend (or the computer) comes up with a solution, for example
+              five colors in a specific order. The player has a certain number
+              of guesses to get to the correct solution. After each guess the
+              counterpart will tell the player which colors are in the correct
+              position and which are part of the solution but not yet positioned
+              correctly.
+            </p>
+          </div>
         </div>
       </div>
     </div>
