@@ -329,7 +329,88 @@
         </div>
       </div>
 
-      <div class="container">TODO</div>
+      <div class="container">
+        <p class="py-2">
+          Interested in working with me? Send me a message! I'm happy to get
+          back to you as soon as I can.
+        </p>
+
+        <form>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <div class="flex flex-col">
+              <label class="uppercase text-gray-500 mb-1" for="first_name">
+                First Name
+              </label>
+              <input
+                class="border"
+                name="first_name"
+                type="text"
+                placeholder="John"
+                required
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="uppercase text-gray-500 mb-1" for="last_name">
+                Last Name
+              </label>
+              <input
+                class="border"
+                name="last_name"
+                type="text"
+                placeholder="Doe"
+                required
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="uppercase text-gray-500 mb-1" for="subject">
+                Email
+              </label>
+              <input
+                class="border"
+                name="subject"
+                type="email"
+                placeholder="How can I reach you?"
+                required
+              />
+            </div>
+
+            <div class="flex flex-col">
+              <label class="uppercase text-gray-500 mb-1" for="subject">
+                Subject
+              </label>
+              <input
+                class="border"
+                name="subject"
+                type="text"
+                placeholder="What's up?"
+                required
+              />
+            </div>
+
+            <div class="flex flex-col sm:col-span-2">
+              <label class="uppercase text-gray-500 mb-1" for="message">
+                Message
+              </label>
+              <textarea
+                class="border"
+                name="message"
+                placeholder="Hi Niels, I'm John. There's this project you might be interested in, what do you say?"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="flex justify-end mt-2">
+            <button
+              class="rounded-full bg-accent px-4 py-1 uppercase"
+              type="submit"
+            >
+              Send
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
