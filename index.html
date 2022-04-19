@@ -552,7 +552,7 @@
 
         if (first_name && last_name && subject && message) {
           var uri = encodeURI(
-            `mailto:niels@heidbrink.dev?subject=${subject}&body=${message} Sincerely, ${first_name} ${last_name}`
+            `mailto:niels@heidbrink.dev?subject=${subject}&body=${message}\n\nSincerely,\n${first_name} ${last_name}`
           );
 
           document.querySelector("#send_email_button").href = uri;
