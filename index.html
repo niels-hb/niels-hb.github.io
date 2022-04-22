@@ -477,7 +477,7 @@
           back to you as soon as I can.
         </p>
 
-        <form onkeyup="updateMailToLink()">
+        <form id="contact_me_form" onkeyup="updateMailToLink()">
           <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
             <div class="flex flex-col">
               <label class="uppercase text-gray-500 mb-1" for="first_name">
@@ -530,6 +530,7 @@
                 id="message"
                 name="message"
                 placeholder="Hi Niels, I'm John. There's this project you might be interested in, what do you say?"
+                required
               ></textarea>
             </div>
           </div>
@@ -537,7 +538,8 @@
           <div class="flex justify-end mt-2">
             <a
               id="send_email_button"
-              class="rounded-full bg-accent px-4 py-1 uppercase"
+              onclick="validateContactMeForm()"
+              class="rounded-full bg-accent px-4 py-1 uppercase cursor-pointer"
             >
               Send
             </a>
@@ -553,13 +555,21 @@
         let subject = document.querySelector("#subject").value;
         let message = document.querySelector("#message").value;
 
+        let sendEmailButton = document.querySelector("#send_email_button");
+
         if (first_name && last_name && subject && message) {
           var uri = encodeURI(
             `mailto:niels@heidbrink.dev?subject=${subject}&body=${message}\n\nSincerely,\n${first_name} ${last_name}`
           );
 
-          document.querySelector("#send_email_button").href = uri;
+          sendEmailButton.setAttribute("href", uri);
+        } else {
+          sendEmailButton.removeAttribute("href");
         }
+      }
+
+      function validateContactMeForm() {
+        return document.querySelector("#contact_me_form").reportValidity();
       }
     </script>
   </body>
